@@ -364,7 +364,7 @@ module Response = struct
 end
 
 
-external fetch : string -> response Js.Promise.t = "" [@@bs.val]
-external fetchWithInit : string -> requestInit -> response Js.Promise.t = "fetch" [@@bs.val]
-external fetchWithRequest : request -> response Js.Promise.t = "fetch" [@@bs.val]
-external fetchWithRequestInit : request -> requestInit -> response Js.Promise.t = "fetch" [@@bs.val]
+external fetch : string -> response Js.Promise.t = "" [@@bs.module "node-fetch"]
+external fetchWithInit : string -> requestInit -> response Js.Promise.t = "fetch" [@@bs.module "node-fetch"]
+external fetchWithRequest : request -> response Js.Promise.t = "fetch" [@@bs.module "node-fetch"]
+external fetchWithRequestInit : request -> requestInit -> response Js.Promise.t = "fetch" [@@bs.module "node-fetch"]
