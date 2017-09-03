@@ -1,7 +1,7 @@
 {
-  "name": "bs-fetch",
-  "version": "0.1.1",
-  "description": "Fetch bindings for BuckleScript",
+  "name": "bs-node-fetch",
+  "version": "0.1.0",
+  "description": "node-fetch bindings for BuckleScript",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
@@ -13,17 +13,17 @@
     "url": "git+https://github.com/reasonml-community/bs-fetch.git"
   },
   "keywords": [
+    "node-fetch",
     "fetch",
-    "browser",
     "xhr",
     "bucklescript"
   ],
-  "author": "glennsl",
+  "author": "arnar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reasonml-community/bs-fetch/issues"
+    "url": "https://github.com/arnarthor/bs-node-fetch/issues"
   },
-  "homepage": "https://github.com/reasonml-community/bs-fetch#readme",
+  "homepage": "https://github.com/arnarthor/bs-node-fetch#readme",
   "devDependencies": {
     "bs-platform": "^1.9.0"
   },
