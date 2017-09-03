@@ -1,4 +1,4 @@
-open Bs_fetch
+open Bs_node_fetch
 
 module Option = struct
   let unwrapUnsafely = function
