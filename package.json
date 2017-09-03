@@ -6,7 +6,7 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "exit 0"
+    "test": "bsb -make-world && node lib/js/examples/examples.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
   "homepage": "https://github.com/reasonml-community/bs-fetch#readme",
   "devDependencies": {
     "bs-platform": "^1.9.0"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.2"
   }
 }
