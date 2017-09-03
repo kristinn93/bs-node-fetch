@@ -24,16 +24,16 @@ Js.Promise.(
 ## Installation
 
 ```sh
-npm install --save bs-fetch
+npm install --save bs-node-fetch
 ```
 
 Then add `bs-fetch` to `bs-dependencies` in your `bsconfig.json`:
 ```js
 {
   ...
-  "bs-dependencies": ["bs-fetch"]
+  "bs-dependencies": ["bs-node-fetch"]
 }
 ```
 
 ## Usage
-See usage examples in [`examples/examples.ml`](https://github.com/reasonml-community/bs-fetch/blob/master/examples/examples.ml). The source is a [single file](https://github.com/reasonml-community/bs-fetch/blob/master/src/bs_fetch.ml)!
+See usage examples in [`examples/examples.ml`](https://github.com/arnarthor/bs-node-fetch/blob/master/examples/examples.ml). The source is a [single file](https://github.com/arnarthor/bs-node-fetch/blob/master/src/bs_fetch.ml)!
