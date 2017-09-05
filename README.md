@@ -27,7 +27,7 @@ Js.Promise.(
 npm install --save bs-node-fetch
 ```
 
-Then add `bs-fetch` to `bs-dependencies` in your `bsconfig.json`:
+Then add `bs-node-fetch` to `bs-dependencies` in your `bsconfig.json`:
 ```js
 {
   ...
