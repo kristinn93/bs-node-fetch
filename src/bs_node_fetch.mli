@@ -212,7 +212,7 @@ module Response : sig
   external text : string Js.Promise.t = "" [@@bs.send.pipe: t]
 end
 
-external fetch : string -> response Js.Promise.t = "node-fetch" [@@bs.module]
-external fetchWithInit : string -> requestInit -> response Js.Promise.t = "node-fetch" [@@bs.module]
-external fetchWithRequest : request -> response Js.Promise.t = "node-fetch" [@@bs.module]
-external fetchWithRequestInit : request -> requestInit -> response Js.Promise.t = "node-fetch" [@@bs.module]
+external fetch : string -> response Js.Promise.t = "default" [@@bs.module "node-fetch"]
+external fetchWithInit : string -> requestInit -> response Js.Promise.t = "default" [@@bs.module "node-fetch"]
+external fetchWithRequest : request -> response Js.Promise.t = "default" [@@bs.module "node-fetch"]
+external fetchWithRequestInit : request -> requestInit -> response Js.Promise.t = "default" [@@bs.module "node-fetch"]
