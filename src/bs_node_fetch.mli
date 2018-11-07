@@ -149,6 +149,7 @@ module RequestInit : sig
     ?redirect:requestRedirect ->
     ?integrity:string ->
     ?keepalive:bool ->
+    ?timeout: int ->
     unit -> t
 end
 
@@ -173,6 +174,7 @@ module Request : sig
   val redirect: t -> requestRedirect
   external integrity : t -> string = "" [@@bs.get]
   external keepalive : t -> bool = "" [@@bs.get]
+  external timeout : t -> int = "" [@@bs.get]
 
   (* Body Impl *)
   external body : t -> readableStream = "" [@@bs.get]
