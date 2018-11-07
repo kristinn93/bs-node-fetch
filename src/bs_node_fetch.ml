@@ -284,19 +284,21 @@ module RequestInit = struct
     ?redirect:string ->
     ?integrity:string ->
     ?keepalive:bool ->
+    ?timeout: int ->
     unit -> requestInit = "" [@@bs.obj]
   let make
-    ?method_:(method_: requestMethod option) 
+    ?method_:(method_: requestMethod option)
     ?headers:(headers: headersInit option)
     ?body:(body: bodyInit option)
-    ?referrer:(referrer: string option) 
-    ?referrerPolicy:(referrerPolicy: referrerPolicy = None) 
-    ?mode:(mode: requestMode option) 
-    ?credentials:(credentials: requestCredentials option) 
-    ?cache:(cache: requestCache option) 
-    ?redirect:(redirect: requestRedirect option) 
-    ?integrity:(integrity: string = "") 
+    ?referrer:(referrer: string option)
+    ?referrerPolicy:(referrerPolicy: referrerPolicy = None)
+    ?mode:(mode: requestMode option)
+    ?credentials:(credentials: requestCredentials option)
+    ?cache:(cache: requestCache option)
+    ?redirect:(redirect: requestRedirect option)
+    ?integrity:(integrity: string = "")
     ?keepalive:(keepalive: bool option)
+    ?timeout:(timeout: int option)
     = make
         ?_method: (map encodeRequestMethod method_)
         ?headers
@@ -309,6 +311,7 @@ module RequestInit = struct
         ?redirect: (map encodeRequestRedirect redirect)
         ~integrity
         ?keepalive
+        ?timeout
 end
 
 module Request = struct
@@ -342,6 +345,7 @@ module Request = struct
   let redirect: t -> requestRedirect = fun self -> decodeRequestRedirect (redirect self)
   external integrity : t -> string = "" [@@bs.get]
   external keepalive : t -> bool = "" [@@bs.get]
+  external timeout: t -> int = "" [@@bs.get]
 end
 
 module Response = struct
